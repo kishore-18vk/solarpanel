@@ -42,7 +42,7 @@ export default function App() {
       setIsGeneratingPDF(true);
       setDownloadSuccess(false);
 
-      const filename = `SK_Powertech_${formData.kw}KW_Solar_Quotation.pdf`;
+      const filename = `skpowertech_quatation.pdf`;
 
       await generateQuotationPDF(previewRef, filename, (currentPage, totalPages) => {
         setPdfProgress({ currentPage, totalPages });
