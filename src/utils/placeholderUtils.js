@@ -26,10 +26,19 @@ export const CAPACITY_PRESETS = {
     inverterPhase: '1 Phase',
     inverterMake: 'V.Guard',
   },
+  '10': {
+    kw: '10',
+    panelWatt: '610 W',
+    panelQty: '16',
+    panelMake: 'V.Guard',
+    inverterKw: '10',
+    inverterPhase: '3 Phase',
+    inverterMake: 'V.Guard',
+  },
 };
 
-export const getDefaultFormData = (capacity = '5') => {
-  const preset = CAPACITY_PRESETS[capacity] || CAPACITY_PRESETS['5'];
+export const getDefaultFormData = (capacity = '10') => {
+  const preset = CAPACITY_PRESETS[capacity] || CAPACITY_PRESETS['10'];
   const today = new Date();
   const dateStr = `${String(today.getDate()).padStart(2, '0')}/${String(today.getMonth() + 1).padStart(2, '0')}/${today.getFullYear()}`;
 
@@ -41,7 +50,7 @@ export const getDefaultFormData = (capacity = '5') => {
     inverterKw: preset.inverterKw,
     inverterPhase: preset.inverterPhase,
     inverterMake: preset.inverterMake,
-    systemAmount: '286965', // Default starting value (manual entry allowed)
+    systemAmount: '550000', // Starting value for 10 KW
     gstPercent: '8.9', // Default starting value (manual entry allowed)
     subsidy: '78000', // Default starting value (manual entry allowed)
     clientName: 'Mr. Suresh Kumar',

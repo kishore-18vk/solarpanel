@@ -50,7 +50,7 @@ export default function QuotationForm({ formData, setFormData, onSelectPreset })
           <p className="text-xs text-slate-600 mt-0.5">Customize plant specs, pricing &amp; client information</p>
         </div>
         <button
-          onClick={() => setFormData(getDefaultFormData('5'))}
+          onClick={() => setFormData(getDefaultFormData('10'))}
           className="flex items-center gap-1.5 text-xs text-slate-700 hover:text-slate-950 bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-lg transition-colors font-medium"
           title="Reset Form"
         >
@@ -59,12 +59,12 @@ export default function QuotationForm({ formData, setFormData, onSelectPreset })
         </button>
       </div>
 
-      {/* QUICK PRESETS (ONLY 3 KW AND 5 KW) */}
+      {/* QUICK PRESETS (3 KW, 5 KW, 10 KW) */}
       <div className="flex flex-col gap-2">
         <label className="text-xs font-bold uppercase tracking-wider text-slate-700">
           Capacity Selection Presets
         </label>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-3 gap-2">
           {Object.keys(CAPACITY_PRESETS).map((kwKey) => {
             const isActive = formData.kw === kwKey;
             return (
@@ -72,14 +72,14 @@ export default function QuotationForm({ formData, setFormData, onSelectPreset })
                 key={kwKey}
                 type="button"
                 onClick={() => onSelectPreset(kwKey)}
-                className={`py-2.5 px-4 rounded-lg text-xs font-bold transition-all border flex items-center justify-center gap-2 ${
+                className={`py-2 px-2 rounded-lg text-xs font-bold transition-all border flex items-center justify-center gap-1.5 ${
                   isActive
                     ? 'bg-amber-500 text-slate-950 border-amber-600 shadow-sm ring-2 ring-amber-400/50'
                     : 'bg-slate-50 text-slate-800 border-slate-300 hover:bg-amber-50 hover:border-amber-300'
                 }`}
               >
                 <Zap className={`w-3.5 h-3.5 ${isActive ? 'fill-slate-950 text-slate-950' : 'text-amber-500'}`} />
-                {kwKey} KW Plant Preset
+                {kwKey} KW Preset
               </button>
             );
           })}

@@ -216,12 +216,15 @@ export const AboutUsPage = ({ placeholders }) => (
 
       {/* About Us Paragraph */}
       <g transform="translate(80, 230)">
-        <rect x="0" y="0" width="634" height="170" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1" rx="6" />
-        <foreignObject x="20" y="20" width="594" height="130">
-          <p xmlns="http://www.w3.org/1999/xhtml" style={{ fontSize: '15px', color: '#334155', lineHeight: '1.6', fontFamily: 'sans-serif' }}>
-            At <strong>{placeholders.COMPANY_NAME}</strong>, we provide advanced UPS and solar power solutions tailored to meet your energy needs. Our focus is on delivering reliable, eco-friendly systems for homes and businesses, ensuring uninterrupted power and sustainable energy.
-          </p>
-        </foreignObject>
+        <rect x="0" y="0" width="634" height="170" fill="#F8FAFC" stroke="#053763" strokeWidth="1.5" rx="6" />
+        <text x="30" y="45" fill="#000000" fontSize="15" fontFamily="sans-serif" fontWeight="bold">
+          <tspan fill="#000000">At </tspan>
+          <tspan fill="#053763" fontWeight="900">{placeholders.COMPANY_NAME}</tspan>
+          <tspan fill="#000000">, we provide advanced UPS and solar power solutions</tspan>
+          <tspan x="30" dy="28">tailored to meet your energy needs. Our focus is on delivering reliable, eco-friendly</tspan>
+          <tspan x="30" dy="28">systems for homes and businesses, ensuring uninterrupted power and sustainable</tspan>
+          <tspan x="30" dy="28">energy.</tspan>
+        </text>
       </g>
 
       {/* Vision & Mission Header */}
@@ -234,17 +237,26 @@ export const AboutUsPage = ({ placeholders }) => (
 
       {/* Vision & Mission Paragraph */}
       <g transform="translate(80, 510)">
-        <rect x="0" y="0" width="634" height="320" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1" rx="6" />
-        <foreignObject x="24" y="24" width="586" height="270">
-          <div xmlns="http://www.w3.org/1999/xhtml" style={{ fontSize: '15px', color: '#334155', lineHeight: '1.7', fontFamily: 'sans-serif' }}>
-            <p style={{ marginBottom: '16px' }}>
-              <strong>Vision:</strong> To be a leading provider of sustainable energy solutions, empowering individuals and businesses with reliable, eco-friendly power systems that promote a greener future.
-            </p>
-            <p>
-              <strong>Mission:</strong> At <strong>{placeholders.COMPANY_NAME}</strong>, our mission is to deliver innovative UPS and solar power solutions that ensure continuous, efficient energy while reducing environmental impact. We are committed to quality, customer satisfaction, and driving the adoption of renewable energy for a brighter tomorrow.
-            </p>
-          </div>
-        </foreignObject>
+        <rect x="0" y="0" width="634" height="320" fill="#F8FAFC" stroke="#053763" strokeWidth="1.5" rx="6" />
+        
+        {/* Vision Section */}
+        <text x="30" y="45" fill="#000000" fontSize="15" fontFamily="sans-serif" fontWeight="bold">
+          <tspan fill="#053763" fontWeight="900" fontSize="16">Vision: </tspan>
+          <tspan fill="#000000">To be a leading provider of sustainable energy solutions,</tspan>
+          <tspan x="30" dy="28">empowering individuals and businesses with reliable, eco-friendly power</tspan>
+          <tspan x="30" dy="28">systems that promote a greener future.</tspan>
+        </text>
+
+        {/* Mission Section */}
+        <text x="30" y="160" fill="#000000" fontSize="15" fontFamily="sans-serif" fontWeight="bold">
+          <tspan fill="#053763" fontWeight="900" fontSize="16">Mission: </tspan>
+          <tspan fill="#000000">At </tspan>
+          <tspan fill="#053763" fontWeight="900">{placeholders.COMPANY_NAME}</tspan>
+          <tspan fill="#000000">, our mission is to deliver innovative UPS and</tspan>
+          <tspan x="30" dy="28">solar power solutions that ensure continuous, efficient energy while reducing</tspan>
+          <tspan x="30" dy="28">environmental impact. We are committed to quality, customer satisfaction, and</tspan>
+          <tspan x="30" dy="28">driving the adoption of renewable energy for a brighter tomorrow.</tspan>
+        </text>
       </g>
 
       <FooterBar placeholders={placeholders} />
@@ -277,11 +289,11 @@ export const ServicesPage = ({ placeholders }) => (
           <text x="45" y="52" fill="#ffffff" fontSize="18" fontWeight="bold" textAnchor="middle">1</text>
           <text x="85" y="40" fill="#053763" fontSize="16" fontWeight="bold">Residential &amp; Commercial</text>
           <text x="85" y="58" fill="#053763" fontSize="16" fontWeight="bold">Rooftop Solar</text>
-          <foreignObject x="20" y="80" width="260" height="90">
-            <p xmlns="http://www.w3.org/1999/xhtml" style={{ fontSize: '13px', color: '#475569', lineHeight: '1.4' }}>
-              Reduce your electricity bills and environmental impact with our custom-designed rooftop solar systems.
-            </p>
-          </foreignObject>
+          <text x="20" y="95" fill="#000000" fontSize="13" fontFamily="sans-serif" fontWeight="bold">
+            <tspan x="20" dy="0">Reduce your electricity bills and</tspan>
+            <tspan x="20" dy="20">environmental impact with our</tspan>
+            <tspan x="20" dy="20">custom-designed rooftop solar systems.</tspan>
+          </text>
         </g>
 
         {/* Service 2 */}
@@ -290,11 +302,11 @@ export const ServicesPage = ({ placeholders }) => (
           <circle cx="45" cy="45" r="24" fill="#D97706" />
           <text x="45" y="52" fill="#ffffff" fontSize="18" fontWeight="bold" textAnchor="middle">2</text>
           <text x="85" y="48" fill="#B45309" fontSize="16" fontWeight="bold">Free Consultation</text>
-          <foreignObject x="20" y="80" width="260" height="90">
-            <p xmlns="http://www.w3.org/1999/xhtml" style={{ fontSize: '13px', color: '#78350F', lineHeight: '1.4' }}>
-              Contact {placeholders.COMPANY_NAME} today and unlock the power of the sun with our expert site analysis.
-            </p>
-          </foreignObject>
+          <text x="20" y="95" fill="#000000" fontSize="13" fontFamily="sans-serif" fontWeight="bold">
+            <tspan x="20" dy="0">Contact {placeholders.COMPANY_NAME} today</tspan>
+            <tspan x="20" dy="20">and unlock the power of the sun with</tspan>
+            <tspan x="20" dy="20">our expert site analysis.</tspan>
+          </text>
         </g>
 
         {/* Service 3 */}
@@ -304,11 +316,11 @@ export const ServicesPage = ({ placeholders }) => (
           <text x="45" y="52" fill="#ffffff" fontSize="18" fontWeight="bold" textAnchor="middle">3</text>
           <text x="85" y="40" fill="#166534" fontSize="16" fontWeight="bold">Expert Operation &amp;</text>
           <text x="85" y="58" fill="#166534" fontSize="16" fontWeight="bold">Maintenance</text>
-          <foreignObject x="20" y="80" width="260" height="90">
-            <p xmlns="http://www.w3.org/1999/xhtml" style={{ fontSize: '13px', color: '#166534', lineHeight: '1.4' }}>
-              Ensure optimal generation and long life with our comprehensive annual care plans and testing.
-            </p>
-          </foreignObject>
+          <text x="20" y="95" fill="#000000" fontSize="13" fontFamily="sans-serif" fontWeight="bold">
+            <tspan x="20" dy="0">Ensure optimal generation and long life</tspan>
+            <tspan x="20" dy="20">with our comprehensive annual care</tspan>
+            <tspan x="20" dy="20">plans and testing.</tspan>
+          </text>
         </g>
 
         {/* Service 4 */}
@@ -317,11 +329,11 @@ export const ServicesPage = ({ placeholders }) => (
           <circle cx="45" cy="45" r="24" fill="#6D28D9" />
           <text x="45" y="52" fill="#ffffff" fontSize="18" fontWeight="bold" textAnchor="middle">4</text>
           <text x="85" y="48" fill="#6D28D9" fontSize="16" fontWeight="bold">Ground Mount Parks</text>
-          <foreignObject x="20" y="80" width="260" height="90">
-            <p xmlns="http://www.w3.org/1999/xhtml" style={{ fontSize: '13px', color: '#5B21B6', lineHeight: '1.4' }}>
-              Looking for large-scale clean energy generation? We design and build utility-grade solar parks.
-            </p>
-          </foreignObject>
+          <text x="20" y="95" fill="#000000" fontSize="13" fontFamily="sans-serif" fontWeight="bold">
+            <tspan x="20" dy="0">Looking for large-scale clean energy</tspan>
+            <tspan x="20" dy="20">generation? We design and build</tspan>
+            <tspan x="20" dy="20">utility-grade solar parks.</tspan>
+          </text>
         </g>
       </g>
 
@@ -561,11 +573,10 @@ export const BOMPage2AndAmount = ({ placeholders }) => (
       {/* AMOUNT IN WORDS */}
       <g transform="translate(50, 830)">
         <rect x="0" y="0" width="694" height="60" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1" rx="4" />
-        <foreignObject x="12" y="10" width="670" height="40">
-          <div xmlns="http://www.w3.org/1999/xhtml" style={{ fontSize: '15px', color: '#000000', fontFamily: 'sans-serif', lineHeight: '1.4' }}>
-            <strong>In Words : </strong><span style={{ color: '#053763', fontWeight: '900' }}>{placeholders.TOTAL_IN_WORDS}</span>
-          </div>
-        </foreignObject>
+        <text x="20" y="36" fill="#000000" fontSize="15" fontFamily="sans-serif" fontWeight="bold">
+          <tspan fill="#000000" fontWeight="bold">In Words : </tspan>
+          <tspan fill="#053763" fontWeight="900">{placeholders.TOTAL_IN_WORDS}</tspan>
+        </text>
       </g>
 
       <FooterBar placeholders={placeholders} />
@@ -674,23 +685,21 @@ export const WhyChooseUsPage = ({ placeholders }) => (
 
       {/* Content Box */}
       <g transform="translate(80, 240)">
-        <rect x="0" y="0" width="634" height="280" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1.5" rx="8" />
-        <foreignObject x="24" y="24" width="586" height="230">
-          <div xmlns="http://www.w3.org/1999/xhtml" style={{ fontSize: '15px', color: '#334155', lineHeight: '1.7', fontFamily: 'sans-serif' }}>
-            <p style={{ marginBottom: '16px' }}>
-              At <strong>{placeholders.COMPANY_NAME}</strong>, we offer tailored energy solutions that prioritize reliability, sustainability, and innovation.
-            </p>
-            <p style={{ marginBottom: '16px' }}>
-              With our advanced UPS and solar power systems, you can count on uninterrupted power and reduced energy costs.
-            </p>
-            <p style={{ marginBottom: '16px' }}>
-              We are committed to delivering top-quality products and exceptional customer service, ensuring your energy needs are met with efficiency and expertise.
-            </p>
-            <p style={{ fontWeight: 'bold', color: '#053763' }}>
-              Choose us for cutting-edge technology, eco-friendly solutions, and a dedicated team you can trust.
-            </p>
-          </div>
-        </foreignObject>
+        <rect x="0" y="0" width="634" height="280" fill="#F8FAFC" stroke="#053763" strokeWidth="1.5" rx="8" />
+        <text x="28" y="45" fill="#000000" fontSize="15" fontFamily="sans-serif" fontWeight="bold">
+          <tspan fill="#000000">At </tspan>
+          <tspan fill="#053763" fontWeight="900">{placeholders.COMPANY_NAME}</tspan>
+          <tspan fill="#000000">, we offer tailored energy solutions that prioritize reliability,</tspan>
+          <tspan x="28" dy="26">sustainability, and innovation.</tspan>
+
+          <tspan x="28" dy="38" fill="#000000">With our advanced UPS and solar power systems, you can count on</tspan>
+          <tspan x="28" dy="26">uninterrupted power and reduced energy costs.</tspan>
+
+          <tspan x="28" dy="38" fill="#000000">We are committed to delivering top-quality products and exceptional customer</tspan>
+          <tspan x="28" dy="26">service, ensuring your energy needs are met with efficiency and expertise.</tspan>
+
+          <tspan x="28" dy="38" fill="#053763" fontWeight="900">Choose us for cutting-edge technology, eco-friendly solutions, and a dedicated team.</tspan>
+        </text>
       </g>
 
       {/* Thank You Card */}
@@ -699,11 +708,12 @@ export const WhyChooseUsPage = ({ placeholders }) => (
         <text x="317" y="55" fill="#FFC700" fontSize="32" fontWeight="900" textAnchor="middle" letterSpacing="1">
           THANK YOU
         </text>
-        <foreignObject x="40" y="85" width="554" height="110">
-          <p xmlns="http://www.w3.org/1999/xhtml" style={{ fontSize: '17px', color: '#ffffff', textAlign: 'center', lineHeight: '1.6', fontFamily: 'sans-serif' }}>
-            Thank you for choosing <strong>{placeholders.COMPANY_NAME}</strong>. We appreciate your trust and are committed to providing you with the best energy solutions.
-          </p>
-        </foreignObject>
+        <text x="317" y="115" fill="#ffffff" fontSize="17" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">
+          <tspan x="317" dy="0">Thank you for choosing </tspan>
+          <tspan fill="#FFC700" fontWeight="900">{placeholders.COMPANY_NAME}</tspan>
+          <tspan fill="#ffffff">. We appreciate your trust</tspan>
+          <tspan x="317" dy="28">and are committed to providing you with the best energy solutions.</tspan>
+        </text>
       </g>
 
       {/* Contact Details Card - Dynamic Address & Phone */}
@@ -711,11 +721,11 @@ export const WhyChooseUsPage = ({ placeholders }) => (
         <rect x="0" y="0" width="634" height="180" fill="#FEF3C7" stroke="#F59E0B" strokeWidth="1.5" rx="8" />
         <text x="40" y="45" fill="#B45309" fontSize="18" fontWeight="bold">CONTACT DETAILS</text>
         
-        <text x="40" y="85" fill="#78350F" fontSize="15" fontWeight="bold">Contact No:</text>
-        <text x="150" y="85" fill="#1F2937" fontSize="15" fontWeight="600">{placeholders.MOBILE_NO}</text>
+        <text x="40" y="85" fill="#000000" fontSize="15" fontWeight="bold">Contact No:</text>
+        <text x="150" y="85" fill="#000000" fontSize="15" fontWeight="bold">{placeholders.MOBILE_NO}</text>
 
-        <text x="40" y="125" fill="#78350F" fontSize="15" fontWeight="bold">Address:</text>
-        <text x="150" y="125" fill="#1F2937" fontSize="14" fontWeight="600">{placeholders.ADDRESS}</text>
+        <text x="40" y="125" fill="#000000" fontSize="15" fontWeight="bold">Address:</text>
+        <text x="150" y="125" fill="#000000" fontSize="14" fontWeight="bold">{placeholders.ADDRESS}</text>
       </g>
 
       <FooterBar placeholders={placeholders} />

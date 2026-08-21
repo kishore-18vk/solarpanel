@@ -67,7 +67,11 @@ export async function generateQuotationPDF(containerRef, filename = 'skpowertech
           const styleElements = clonedDoc.querySelectorAll('style');
           styleElements.forEach((s) => {
             if (s.innerHTML && s.innerHTML.includes('oklch')) {
-              s.innerHTML = s.innerHTML.replace(/oklch\([^)]+\)/g, '#ffffff');
+              s.innerHTML = s.innerHTML
+                .replace(/color:\s*oklch\([^)]+\)/g, 'color: #000000')
+                .replace(/background-color:\s*oklch\([^)]+\)/g, 'background-color: #ffffff')
+                .replace(/border-color:\s*oklch\([^)]+\)/g, 'border-color: #000000')
+                .replace(/oklch\([^)]+\)/g, '#000000');
             }
           });
 
@@ -92,7 +96,10 @@ export async function generateQuotationPDF(containerRef, filename = 'skpowertech
               if (el.getAttribute && el.getAttribute('style')) {
                 const styleAttr = el.getAttribute('style');
                 if (styleAttr.includes('oklch')) {
-                  el.setAttribute('style', styleAttr.replace(/oklch\([^)]+\)/g, '#ffffff'));
+                  el.setAttribute('style', styleAttr
+                    .replace(/color:\s*oklch\([^)]+\)/g, 'color: #000000')
+                    .replace(/background-color:\s*oklch\([^)]+\)/g, 'background-color: #ffffff')
+                    .replace(/oklch\([^)]+\)/g, '#000000'));
                 }
               }
             } catch (err) {

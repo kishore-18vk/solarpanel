@@ -6,7 +6,7 @@ import { getDefaultFormData, CAPACITY_PRESETS, getPlaceholderValues } from './ut
 import { generateQuotationPDF } from './utils/pdfGenerator';
 
 export default function App() {
-  const [formData, setFormData] = useState(() => getDefaultFormData('5'));
+  const [formData, setFormData] = useState(() => getDefaultFormData('10'));
   const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
   const [pdfProgress, setPdfProgress] = useState(null);
   const [downloadSuccess, setDownloadSuccess] = useState(false);
@@ -14,7 +14,7 @@ export default function App() {
 
   const previewRef = useRef(null);
 
-  // Handle Preset Button selection (3 KW / 5 KW)
+  // Handle Preset Button selection (3 KW / 5 KW / 10 KW)
   const handleSelectPreset = (capacityKey) => {
     const preset = CAPACITY_PRESETS[capacityKey];
     if (!preset) return;
@@ -42,7 +42,7 @@ export default function App() {
       setIsGeneratingPDF(true);
       setDownloadSuccess(false);
 
-      const filename = `skpowertech_quatation.pdf`;
+      const filename = `skpowertech quatation.pdf`;
 
       await generateQuotationPDF(previewRef, filename, (currentPage, totalPages) => {
         setPdfProgress({ currentPage, totalPages });
